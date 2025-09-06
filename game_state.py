@@ -36,6 +36,12 @@ class WeatherCard(Card):
     def __init__(self, name):
         super().__init__(name)
 
+class Deck:
+    def __init__(self):
+        self.cards = []
+
+    def  
+   
 
 class GameEngine:
     def __init__(self):
@@ -45,5 +51,4 @@ class GameEngine:
         self.current_player = None
         self.current_round = 0
     
-    def start_new_game(self):
-        
+    
