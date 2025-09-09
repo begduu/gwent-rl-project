@@ -1,3 +1,4 @@
+import json
 class Player:
     def __init__(self, deck, hand, faction, leader_card):
         self.deck = deck
@@ -20,27 +21,28 @@ class Board:
         self.weather = []
 
 class Card:
-    def __init__(self, name):
+    def __init__(self, name, ability):
         self.name = name
+        self.ability = ability
 
 class TroopCard(Card):
-    def __init__(self, name, strength):
-        super().__init__(name)
+    def __init__(self, name, strength, ability):
+        super().__init__(name, ability)
         self.strength = strength 
 
 class SpecialCard(Card):
-    def __init__(self, name):
-        super().__init__(name)
+    def __init__(self, name, ability):
+        super().__init__(name, ability)
 
 class WeatherCard(Card):
-    def __init__(self, name):
-        super().__init__(name)
+    def __init__(self, name, ability):
+        super().__init__(name, ability)
 
 class Deck:
     def __init__(self):
         self.cards = []
 
-    def  
+    def 
    
 
 class GameEngine:
