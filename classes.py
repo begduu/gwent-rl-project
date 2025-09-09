@@ -38,6 +38,10 @@ class WeatherCard(Card):
     def __init__(self, name, ability):
         super().__init__(name, ability)
 
+class LeaderCard(Card):
+    def __init__(self, name, ability):
+        super().__init__(name, ability)
+        
 class Deck:
     def __init__(self):
         self.cards = []

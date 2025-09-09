@@ -1,7 +1,8 @@
 [
     {
         "name": "Mysterious Elf",
-        "id": "142",
+        "type": "Troop",
+        "id": "0",
         "deck": "neutral",
         "row": "close",
         "strength": "0",
@@ -11,6 +12,7 @@
     },
     {
         "name": "Decoy",
+        "type": "Special",
         "id": "1",
         "deck": "special",
         "row": "",
@@ -21,7 +23,8 @@
     },
     {
         "name": "Biting Frost",
-        "id": "4",
+        "type": "Weather",
+        "id": "2",
         "deck": "weather",
         "row": "",
         "strength": "",
@@ -31,7 +34,8 @@
     },
     {
         "name": "Cirilla Fiona Elen Riannon",
-        "id": "139",
+        "type": "Troop",
+        "id": "3",
         "deck": "neutral",
         "row": "close",
         "strength": "15",
@@ -41,7 +45,8 @@
     },
     {
         "name": "Clear Weather",
-        "id": "7",
+        "type": "Weather",
+        "id": "4",
         "deck": "weather",
         "row": "",
         "strength": "",
@@ -51,7 +56,8 @@
     },
     {
         "name": "Commander's Horn",
-        "id": "2",
+        "type": "Special",
+        "id": "5",
         "deck": "special",
         "row": "",
         "strength": "",
@@ -61,7 +67,8 @@
     },
     {
         "name": "Dandelion",
-        "id": "11",
+        "type": "Troop",
+        "id": "6",
         "deck": "neutral",
         "row": "close",
         "strength": "2",
@@ -71,7 +78,8 @@
     },
     {
         "name": "Emiel Regis Rohellec Terzieff",
-        "id": "",
+        "type": "Troop",
+        "id": "7",
         "deck": "neutral",
         "row": "close",
         "strength": "5",
@@ -81,7 +89,8 @@
     },
     {
         "name": "Geralt of Rivia",
-        "id": "138",
+        "type": "Troop",
+        "id": "8",
         "deck": "neutral",
         "row": "close",
         "strength": "15",
@@ -91,7 +100,8 @@
     },
     {
         "name": "Impenetrable Fog",
-        "id": "5",
+        "type": "Weather",
+        "id": "9",
         "deck": "weather",
         "row": "",
         "strength": "",
@@ -101,7 +111,8 @@
     },
     {
         "name": "Scorch",
-        "id": "3",
+        "type": "Special",
+        "id": "10",
         "deck": "special",
         "row": "",
         "strength": "",
@@ -111,7 +122,8 @@
     },
     {
         "name": "Torrential Rain",
-        "id": "6",
+        "type": "Weather",
+        "id": "11",
         "deck": "weather",
         "row": "",
         "strength": "",
@@ -121,7 +133,8 @@
     },
     {
         "name": "Triss Merigold",
-        "id": "141",
+        "type": "Troop",
+        "id": "12",
         "deck": "neutral",
         "row": "close",
         "strength": "7",
@@ -131,7 +144,8 @@
     },
     {
         "name": "Vesemir",
-        "id": "9",
+        "type": "Troop",
+        "id": "13",
         "deck": "neutral",
         "row": "close",
         "strength": "6",
@@ -141,7 +155,8 @@
     },
     {
         "name": "Villentretenmerth",
-        "id": "8",
+        "type": "Troop",
+        "id": "14",
         "deck": "neutral",
         "row": "close",
         "strength": "7",
@@ -151,7 +166,8 @@
     },
     {
         "name": "Yennefer of Vengerberg",
-        "id": "140",
+        "type": "Troop",
+        "id": "15",
         "deck": "neutral",
         "row": "ranged",
         "strength": "7",
@@ -161,7 +177,8 @@
     },
     {
         "name": "Zoltan Chivay",
-        "id": "10",
+        "type": "Troop",
+        "id": "16",
         "deck": "neutral",
         "row": "close",
         "strength": "5",
@@ -171,7 +188,8 @@
     },
     {
         "name": "Olgierd von Everec",
-        "id": "",
+        "type": "Troop",
+        "id": "17",
         "deck": "neutral",
         "row": "agile",
         "strength": "6",
@@ -181,7 +199,8 @@
     },
     {
         "name": "Gaunter O'Dimm",
-        "id": "",
+        "type": "Troop",
+        "id": "18",
         "deck": "neutral",
         "row": "siege",
         "strength": "2",
@@ -191,7 +210,8 @@
     },
     {
         "name": "Gaunter O'Dimm - Darkness",
-        "id": "",
+        "type": "Troop",
+        "id": "19",
         "deck": "neutral",
         "row": "ranged",
         "strength": "4",
@@ -201,7 +221,8 @@
     },
     {
         "name": "Cow",
-        "id": "",
+        "type": "Troop",
+        "id": "20",
         "deck": "neutral",
         "row": "ranged",
         "strength": "0",
@@ -211,7 +232,8 @@
     },
     {
         "name": "Bovine Defense Force",
-        "id": "",
+        "type": "Troop",
+        "id": "21",
         "deck": "neutral",
         "row": "close",
         "strength": "8",
@@ -221,7 +243,8 @@
     },
     {
         "name": "Foltest - King of Temeria",
-        "id": "5",
+        "type": "Leader",
+        "id": "22",
         "deck": "realms",
         "row": "leader",
         "strength": "",
@@ -231,7 +254,8 @@
     },
     {
         "name": "Foltest - Lord Commander of the North",
-        "id": "8",
+        "type": "Leader",
+        "id": "23",
         "deck": "realms",
         "row": "leader",
         "strength": "",
@@ -241,7 +265,8 @@
     },
     {
         "name": "Foltest - The Siegemaster",
-        "id": "6",
+        "type": "Leader",
+        "id": "24",
         "deck": "realms",
         "row": "leader",
         "strength": "",
@@ -251,7 +276,8 @@
     },
     {
         "name": "Foltest - The Steel-Forged",
-        "id": "7",
+        "type": "Leader",
+        "id": "25",
         "deck": "realms",
         "row": "leader",
         "strength": "",
@@ -261,7 +287,8 @@
     },
     {
         "name": "Foltest - Son of Medell",
-        "id": "",
+        "type": "Leader",
+        "id": "26",
         "deck": "realms",
         "row": "leader",
         "strength": "",
@@ -271,7 +298,8 @@
     },
     {
         "name": "Ballista",
-        "id": "79",
+        "type": "Troop",
+        "id": "27",
         "deck": "realms",
         "row": "siege",
         "strength": "6",
@@ -281,7 +309,8 @@
     },
     {
         "name": "Blue Stripes Commando",
-        "id": "92",
+        "type": "Troop",
+        "id": "28",
         "deck": "realms",
         "row": "close",
         "strength": "4",
@@ -291,7 +320,8 @@
     },
     {
         "name": "Catapult",
-        "id": "75",
+        "type": "Troop",
+        "id": "29",
         "deck": "realms",
         "row": "siege",
         "strength": "8",
@@ -301,7 +331,8 @@
     },
     {
         "name": "Crinfrid Reavers Dragon Hunter",
-        "id": "87",
+        "type": "Troop",
+        "id": "30",
         "deck": "realms",
         "row": "ranged",
         "strength": "5",
@@ -311,7 +342,8 @@
     },
     {
         "name": "Dethmold",
-        "id": "76",
+        "type": "Troop",
+        "id": "31",
         "deck": "realms",
         "row": "ranged",
         "strength": "6",
@@ -321,7 +353,8 @@
     },
     {
         "name": "Dun Banner Medic",
-        "id": "88",
+        "type": "Troop",
+        "id": "32",
         "deck": "realms",
         "row": "siege",
         "strength": "5",
@@ -331,7 +364,8 @@
     },
     {
         "name": "Esterad Thyssen",
-        "id": "11",
+        "type": "Troop",
+        "id": "33",
         "deck": "realms",
         "row": "close",
         "strength": "10",
@@ -341,7 +375,8 @@
     },
     {
         "name": "John Natalis",
-        "id": "10",
+        "type": "Troop",
+        "id": "34",
         "deck": "realms",
         "row": "close",
         "strength": "10",
@@ -351,7 +386,8 @@
     },
     {
         "name": "Kaedweni Siege Expert",
-        "id": "98",
+        "type": "Troop",
+        "id": "35",
         "deck": "realms",
         "row": "siege",
         "strength": "1",
@@ -361,7 +397,8 @@
     },
     {
         "name": "Kaedweni Siege Expert",
-        "id": "99",
+        "type": "Troop",
+        "id": "36",
         "deck": "realms",
         "row": "siege",
         "strength": "1",
@@ -371,7 +408,8 @@
     },
     {
         "name": "Kaedweni Siege Expert",
-        "id": "100",
+        "type": "Troop",
+        "id": "37",
         "deck": "realms",
         "row": "siege",
         "strength": "1",
@@ -381,7 +419,8 @@
     },
     {
         "name": "Keira Metz",
-        "id": "84",
+        "type": "Troop",
+        "id": "38",
         "deck": "realms",
         "row": "ranged",
         "strength": "5",
@@ -391,7 +430,8 @@
     },
     {
         "name": "Philippa Eilhart",
-        "id": "12",
+        "type": "Troop",
+        "id": "39",
         "deck": "realms",
         "row": "ranged",
         "strength": "10",
@@ -401,7 +441,8 @@
     },
     {
         "name": "Poor Fucking Infantry",
-        "id": "95",
+        "type": "Troop",
+        "id": "40",
         "deck": "realms",
         "row": "close",
         "strength": "1",
@@ -411,7 +452,8 @@
     },
     {
         "name": "Prince Stennis",
-        "id": "86",
+        "type": "Troop",
+        "id": "41",
         "deck": "realms",
         "row": "close",
         "strength": "5",
@@ -421,7 +463,8 @@
     },
     {
         "name": "Redanian Foot Soldier",
-        "id": "96",
+        "type": "Troop",
+        "id": "42",
         "deck": "realms",
         "row": "close",
         "strength": "1",
@@ -431,7 +474,8 @@
     },
     {
         "name": "Redanian Foot Soldier",
-        "id": "97",
+        "type": "Troop",
+        "id": "43",
         "deck": "realms",
         "row": "close",
         "strength": "1",
@@ -441,7 +485,8 @@
     },
     {
         "name": "Sheldon Skaggs",
-        "id": "91",
+        "type": "Troop",
+        "id": "44",
         "deck": "realms",
         "row": "ranged",
         "strength": "4",
@@ -451,7 +496,8 @@
     },
     {
         "name": "Siege Tower",
-        "id": "81",
+        "type": "Troop",
+        "id": "45",
         "deck": "realms",
         "row": "siege",
         "strength": "6",
@@ -461,7 +507,8 @@
     },
     {
         "name": "Siegfried of Denesle",
-        "id": "83",
+        "type": "Troop",
+        "id": "46",
         "deck": "realms",
         "row": "close",
         "strength": "5",
@@ -471,7 +518,8 @@
     },
     {
         "name": "Sigismund Dijkstra",
-        "id": "89",
+        "type": "Troop",
+        "id": "47",
         "deck": "realms",
         "row": "close",
         "strength": "4",
@@ -481,7 +529,8 @@
     },
     {
         "name": "S\u00edle de Tansarville",
-        "id": "85",
+        "type": "Troop",
+        "id": "48",
         "deck": "realms",
         "row": "ranged",
         "strength": "5",
@@ -491,7 +540,8 @@
     },
     {
         "name": "Thaler",
-        "id": "94",
+        "type": "Troop",
+        "id": "49",
         "deck": "realms",
         "row": "siege",
         "strength": "1",
@@ -501,7 +551,8 @@
     },
     {
         "name": "Sabrina Glevissig",
-        "id": "90",
+        "type": "Troop",
+        "id": "50",
         "deck": "realms",
         "row": "ranged",
         "strength": "4",
@@ -511,7 +562,8 @@
     },
     {
         "name": "Vernon Roche",
-        "id": "9",
+        "type": "Troop",
+        "id": "51",
         "deck": "realms",
         "row": "close",
         "strength": "10",
@@ -521,7 +573,8 @@
     },
     {
         "name": "Ves",
-        "id": "82",
+        "type": "Troop",
+        "id": "52",
         "deck": "realms",
         "row": "close",
         "strength": "5",
@@ -531,7 +584,8 @@
     },
     {
         "name": "Yarpen Zigrin",
-        "id": "93",
+        "type": "Troop",
+        "id": "53",
         "deck": "realms",
         "row": "close",
         "strength": "2",
@@ -541,7 +595,8 @@
     },
     {
         "name": "Trebuchet",
-        "id": "77",
+        "type": "Troop",
+        "id": "54",
         "deck": "realms",
         "row": "siege",
         "strength": "6",
@@ -551,7 +606,8 @@
     },
     {
         "name": "Trebuchet",
-        "id": "78",
+        "type": "Troop",
+        "id": "55",
         "deck": "realms",
         "row": "siege",
         "strength": "6",
@@ -561,7 +617,8 @@
     },
     {
         "name": "Emhyr var Emreis - His Imperial Majesty",
-        "id": "1",
+        "type": "Leader",
+        "id": "56",
         "deck": "nilfgaard",
         "row": "leader",
         "strength": "",
@@ -571,7 +628,8 @@
     },
     {
         "name": "Emhyr var Emreis - Emperor of Nilfgaard",
-        "id": "2",
+        "type": "Leader",
+        "id": "57",
         "deck": "nilfgaard",
         "row": "leader",
         "strength": "",
@@ -581,7 +639,8 @@
     },
     {
         "name": "Emhyr var Emreis - the White Flame",
-        "id": "3",
+        "type": "Leader",
+        "id": "58",
         "deck": "nilfgaard",
         "row": "leader",
         "strength": "",
@@ -591,7 +650,8 @@
     },
     {
         "name": "Emhyr var Emreis - The Relentless",
-        "id": "4",
+        "type": "Leader",
+        "id": "59",
         "deck": "nilfgaard",
         "row": "leader",
         "strength": "",
@@ -601,7 +661,8 @@
     },
     {
         "name": "Emhyr var Emreis - Invader of the North",
-        "id": "",
+        "type": "Leader",
+        "id": "60",
         "deck": "nilfgaard",
         "row": "leader",
         "strength": "",
@@ -611,7 +672,8 @@
     },
     {
         "name": "Albrich",
-        "id": "68",
+        "type": "Troop",
+        "id": "61",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "2",
@@ -621,7 +683,8 @@
     },
     {
         "name": "Assire var Anahid",
-        "id": "52",
+        "type": "Troop",
+        "id": "62",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "6",
@@ -631,7 +694,8 @@
     },
     {
         "name": "Black Infantry Archer",
-        "id": "47",
+        "type": "Troop",
+        "id": "63",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "10",
@@ -641,7 +705,8 @@
     },
     {
         "name": "Black Infantry Archer",
-        "id": "48",
+        "type": "Troop",
+        "id": "64",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "10",
@@ -651,7 +716,8 @@
     },
     {
         "name": "Cahir Mawr Dyffryn aep Ceallach",
-        "id": "54",
+        "type": "Troop",
+        "id": "65",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "6",
@@ -661,7 +727,8 @@
     },
     {
         "name": "Cynthia",
-        "id": "60",
+        "type": "Troop",
+        "id": "66",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "4",
@@ -671,7 +738,8 @@
     },
     {
         "name": "Etolian Auxiliary Archers",
-        "id": "72",
+        "type": "Troop",
+        "id": "67",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "1",
@@ -681,7 +749,8 @@
     },
     {
         "name": "Etolian Auxiliary Archers",
-        "id": "73",
+        "type": "Troop",
+        "id": "68",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "1",
@@ -691,7 +760,8 @@
     },
     {
         "name": "Fringilla Vigo",
-        "id": "53",
+        "type": "Troop",
+        "id": "69",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "6",
@@ -701,7 +771,8 @@
     },
     {
         "name": "Heavy Zerrikanian Fire Scorpion",
-        "id": "49",
+        "type": "Troop",
+        "id": "70",
         "deck": "nilfgaard",
         "row": "siege",
         "strength": "10",
@@ -711,7 +782,8 @@
     },
     {
         "name": "Impera Brigade Guard",
-        "id": "67",
+        "type": "Troop",
+        "id": "71",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "3",
@@ -721,7 +793,8 @@
     },
     {
         "name": "Letho of Gulet",
-        "id": "147",
+        "type": "Troop",
+        "id": "72",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "10",
@@ -731,7 +804,8 @@
     },
     {
         "name": "Menno Coehoorn",
-        "id": "148",
+        "type": "Troop",
+        "id": "73",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "10",
@@ -741,7 +815,8 @@
     },
     {
         "name": "Morteisen",
-        "id": "64",
+        "type": "Troop",
+        "id": "74",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "3",
@@ -751,7 +826,8 @@
     },
     {
         "name": "Morvran Voorhis",
-        "id": "149",
+        "type": "Troop",
+        "id": "75",
         "deck": "nilfgaard",
         "row": "siege",
         "strength": "10",
@@ -761,7 +837,8 @@
     },
     {
         "name": "Nausicaa Cavalry Rider",
-        "id": "71",
+        "type": "Troop",
+        "id": "76",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "2",
@@ -771,7 +848,8 @@
     },
     {
         "name": "Puttkammer",
-        "id": "66",
+        "type": "Troop",
+        "id": "77",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "3",
@@ -781,7 +859,8 @@
     },
     {
         "name": "Rainfarn",
-        "id": "61",
+        "type": "Troop",
+        "id": "78",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "4",
@@ -791,7 +870,8 @@
     },
     {
         "name": "Renuald aep Matsen",
-        "id": "56",
+        "type": "Troop",
+        "id": "79",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "5",
@@ -801,7 +881,8 @@
     },
     {
         "name": "Rotten Mangonel",
-        "id": "65",
+        "type": "Troop",
+        "id": "80",
         "deck": "nilfgaard",
         "row": "siege",
         "strength": "3",
@@ -811,7 +892,8 @@
     },
     {
         "name": "Shilard Fitz-Oesterlen",
-        "id": "51",
+        "type": "Troop",
+        "id": "81",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "7",
@@ -821,7 +903,8 @@
     },
     {
         "name": "Siege Engineer",
-        "id": "55",
+        "type": "Troop",
+        "id": "82",
         "deck": "nilfgaard",
         "row": "siege",
         "strength": "6",
@@ -831,7 +914,8 @@
     },
     {
         "name": "Siege Technician",
-        "id": "74",
+        "type": "Troop",
+        "id": "83",
         "deck": "nilfgaard",
         "row": "siege",
         "strength": "0",
@@ -841,7 +925,8 @@
     },
     {
         "name": "Stefan Skellen",
-        "id": "50",
+        "type": "Troop",
+        "id": "84",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "9",
@@ -851,7 +936,8 @@
     },
     {
         "name": "Sweers",
-        "id": "69",
+        "type": "Troop",
+        "id": "85",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "2",
@@ -861,7 +947,8 @@
     },
     {
         "name": "Tibor Eggebracht",
-        "id": "150",
+        "type": "Troop",
+        "id": "86",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "10",
@@ -871,7 +958,8 @@
     },
     {
         "name": "Vanhemar",
-        "id": "62",
+        "type": "Troop",
+        "id": "87",
         "deck": "nilfgaard",
         "row": "ranged",
         "strength": "4",
@@ -881,7 +969,8 @@
     },
     {
         "name": "Vattier de Rideaux",
-        "id": "63",
+        "type": "Troop",
+        "id": "88",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "4",
@@ -891,7 +980,8 @@
     },
     {
         "name": "Vreemde",
-        "id": "70",
+        "type": "Troop",
+        "id": "89",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "2",
@@ -901,7 +991,8 @@
     },
     {
         "name": "Young Emissary",
-        "id": "58",
+        "type": "Troop",
+        "id": "90",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "5",
@@ -911,7 +1002,8 @@
     },
     {
         "name": "Young Emissary",
-        "id": "59",
+        "type": "Troop",
+        "id": "91",
         "deck": "nilfgaard",
         "row": "close",
         "strength": "5",
@@ -921,7 +1013,8 @@
     },
     {
         "name": "Zerrikanian Fire Scorpion",
-        "id": "57",
+        "type": "Troop",
+        "id": "92",
         "deck": "nilfgaard",
         "row": "siege",
         "strength": "5",
@@ -931,7 +1024,8 @@
     },
     {
         "name": "Eredin - Commander of the Red Riders",
-        "id": "134",
+        "type": "Leader",
+        "id": "93",
         "deck": "monsters",
         "row": "leader",
         "strength": "",
@@ -941,7 +1035,8 @@
     },
     {
         "name": "Eredin - Bringer of Death",
-        "id": "136",
+        "type": "Leader",
+        "id": "94",
         "deck": "monsters",
         "row": "leader",
         "strength": "",
@@ -951,7 +1046,8 @@
     },
     {
         "name": "Eredin - Destroyer of Worlds",
-        "id": "137",
+        "type": "Leader",
+        "id": "95",
         "deck": "monsters",
         "row": "leader",
         "strength": "",
@@ -961,7 +1057,8 @@
     },
     {
         "name": "Eredin - King of the Wild Hunt",
-        "id": "135",
+        "type": "Leader",
+        "id": "96",
         "deck": "monsters",
         "row": "leader",
         "strength": "",
@@ -971,7 +1068,8 @@
     },
     {
         "name": "Eredin Br\u00e9acc Glas - The Treacherous",
-        "id": "",
+        "type": "Leader",
+        "id": "97",
         "deck": "monsters",
         "row": "leader",
         "strength": "",
@@ -981,7 +1079,8 @@
     },
     {
         "name": "Arachas ",
-        "id": "27",
+        "type": "Troop",
+        "id": "98",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -991,7 +1090,8 @@
     },
     {
         "name": "Arachas ",
-        "id": "28",
+        "type": "Troop",
+        "id": "99",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1001,7 +1101,8 @@
     },
     {
         "name": "Arachas ",
-        "id": "29",
+        "type": "Troop",
+        "id": "100",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1011,7 +1112,8 @@
     },
     {
         "name": "Arachas- Behemoth",
-        "id": "15",
+        "type": "Troop",
+        "id": "101",
         "deck": "monsters",
         "row": "siege",
         "strength": "6",
@@ -1021,7 +1123,8 @@
     },
     {
         "name": "Botchling",
-        "id": "26",
+        "type": "Troop",
+        "id": "102",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1031,7 +1134,8 @@
     },
     {
         "name": "Celaeno Harpy",
-        "id": "38",
+        "type": "Troop",
+        "id": "103",
         "deck": "monsters",
         "row": "agile",
         "strength": "2",
@@ -1041,7 +1145,8 @@
     },
     {
         "name": "Cockatrice",
-        "id": "36",
+        "type": "Troop",
+        "id": "104",
         "deck": "monsters",
         "row": "ranged",
         "strength": "2",
@@ -1051,7 +1156,8 @@
     },
     {
         "name": "Crone - Brewess",
-        "id": "16",
+        "type": "Troop",
+        "id": "105",
         "deck": "monsters",
         "row": "close",
         "strength": "6",
@@ -1061,7 +1167,8 @@
     },
     {
         "name": "Crone - Weavess",
-        "id": "17",
+        "type": "Troop",
+        "id": "106",
         "deck": "monsters",
         "row": "close",
         "strength": "6",
@@ -1071,7 +1178,8 @@
     },
     {
         "name": "Crone - Whispess",
-        "id": "18",
+        "type": "Troop",
+        "id": "107",
         "deck": "monsters",
         "row": "close",
         "strength": "6",
@@ -1081,7 +1189,8 @@
     },
     {
         "name": "Draug",
-        "id": "143",
+        "type": "Troop",
+        "id": "108",
         "deck": "monsters",
         "row": "close",
         "strength": "10",
@@ -1091,7 +1200,8 @@
     },
     {
         "name": "Earth Elemental",
-        "id": "12",
+        "type": "Troop",
+        "id": "109",
         "deck": "monsters",
         "row": "siege",
         "strength": "6",
@@ -1101,7 +1211,8 @@
     },
     {
         "name": "Endrega",
-        "id": "34",
+        "type": "Troop",
+        "id": "110",
         "deck": "monsters",
         "row": "ranged",
         "strength": "2",
@@ -1111,7 +1222,8 @@
     },
     {
         "name": "Fiend",
-        "id": "13",
+        "type": "Troop",
+        "id": "111",
         "deck": "monsters",
         "row": "close",
         "strength": "6",
@@ -1121,7 +1233,8 @@
     },
     {
         "name": "Fire Elemental",
-        "id": "14",
+        "type": "Troop",
+        "id": "112",
         "deck": "monsters",
         "row": "siege",
         "strength": "6",
@@ -1131,7 +1244,8 @@
     },
     {
         "name": "Foglet",
-        "id": "39",
+        "type": "Troop",
+        "id": "113",
         "deck": "monsters",
         "row": "close",
         "strength": "2",
@@ -1141,7 +1255,8 @@
     },
     {
         "name": "Forktail",
-        "id": "19",
+        "type": "Troop",
+        "id": "114",
         "deck": "monsters",
         "row": "close",
         "strength": "5",
@@ -1151,7 +1266,8 @@
     },
     {
         "name": "Frightener",
-        "id": "23",
+        "type": "Troop",
+        "id": "115",
         "deck": "monsters",
         "row": "close",
         "strength": "5",
@@ -1161,7 +1277,8 @@
     },
     {
         "name": "Gargoyle",
-        "id": "37",
+        "type": "Troop",
+        "id": "116",
         "deck": "monsters",
         "row": "ranged",
         "strength": "2",
@@ -1171,7 +1288,8 @@
     },
     {
         "name": "Ghoul",
-        "id": "44",
+        "type": "Troop",
+        "id": "117",
         "deck": "monsters",
         "row": "close",
         "strength": "1",
@@ -1181,7 +1299,8 @@
     },
     {
         "name": "Ghoul",
-        "id": "45",
+        "type": "Troop",
+        "id": "118",
         "deck": "monsters",
         "row": "close",
         "strength": "1",
@@ -1191,7 +1310,8 @@
     },
     {
         "name": "Ghoul",
-        "id": "46",
+        "type": "Troop",
+        "id": "119",
         "deck": "monsters",
         "row": "close",
         "strength": "1",
@@ -1201,7 +1321,8 @@
     },
     {
         "name": "Grave Hag",
-        "id": "25",
+        "type": "Troop",
+        "id": "120",
         "deck": "monsters",
         "row": "ranged",
         "strength": "5",
@@ -1211,7 +1332,8 @@
     },
     {
         "name": "Griffin",
-        "id": "21",
+        "type": "Troop",
+        "id": "121",
         "deck": "monsters",
         "row": "close",
         "strength": "5",
@@ -1221,7 +1343,8 @@
     },
     {
         "name": "Harpy",
-        "id": "35",
+        "type": "Troop",
+        "id": "122",
         "deck": "monsters",
         "row": "agile",
         "strength": "2",
@@ -1231,7 +1354,8 @@
     },
     {
         "name": "Ice Giant",
-        "id": "24",
+        "type": "Troop",
+        "id": "123",
         "deck": "monsters",
         "row": "siege",
         "strength": "5",
@@ -1241,7 +1365,8 @@
     },
     {
         "name": "Imlerith",
-        "id": "144",
+        "type": "Troop",
+        "id": "124",
         "deck": "monsters",
         "row": "close",
         "strength": "10",
@@ -1251,7 +1376,8 @@
     },
     {
         "name": "Kayran",
-        "id": "146",
+        "type": "Troop",
+        "id": "125",
         "deck": "monsters",
         "row": "agile",
         "strength": "8",
@@ -1261,7 +1387,8 @@
     },
     {
         "name": "Leshen",
-        "id": "145",
+        "type": "Troop",
+        "id": "126",
         "deck": "monsters",
         "row": "ranged",
         "strength": "10",
@@ -1271,7 +1398,8 @@
     },
     {
         "name": "Nekker",
-        "id": "41",
+        "type": "Troop",
+        "id": "127",
         "deck": "monsters",
         "row": "close",
         "strength": "2",
@@ -1281,7 +1409,8 @@
     },
     {
         "name": "Nekker",
-        "id": "42",
+        "type": "Troop",
+        "id": "128",
         "deck": "monsters",
         "row": "close",
         "strength": "2",
@@ -1291,7 +1420,8 @@
     },
     {
         "name": "Nekker",
-        "id": "43",
+        "type": "Troop",
+        "id": "129",
         "deck": "monsters",
         "row": "close",
         "strength": "2",
@@ -1301,7 +1431,8 @@
     },
     {
         "name": "Plague Maiden",
-        "id": "20",
+        "type": "Troop",
+        "id": "130",
         "deck": "monsters",
         "row": "close",
         "strength": "5",
@@ -1311,7 +1442,8 @@
     },
     {
         "name": "Vampire - Bruxa",
-        "id": "33",
+        "type": "Troop",
+        "id": "131",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1321,7 +1453,8 @@
     },
     {
         "name": "Vampire - Ekimmara",
-        "id": "30",
+        "type": "Troop",
+        "id": "132",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1331,7 +1464,8 @@
     },
     {
         "name": "Vampire - Fleder",
-        "id": "31",
+        "type": "Troop",
+        "id": "133",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1341,7 +1475,8 @@
     },
     {
         "name": "Vampire - Garkain",
-        "id": "32",
+        "type": "Troop",
+        "id": "134",
         "deck": "monsters",
         "row": "close",
         "strength": "4",
@@ -1351,7 +1486,8 @@
     },
     {
         "name": "Vampire - Katakan",
-        "id": "",
+        "type": "Troop",
+        "id": "135",
         "deck": "monsters",
         "row": "close",
         "strength": "5",
@@ -1361,7 +1497,8 @@
     },
     {
         "name": "Werewolf",
-        "id": "22",
+        "type": "Troop",
+        "id": "136",
         "deck": "monsters",
         "row": "close",
         "strength": "5",
@@ -1371,7 +1508,8 @@
     },
     {
         "name": "Wyvern",
-        "id": "40",
+        "type": "Troop",
+        "id": "137",
         "deck": "monsters",
         "row": "ranged",
         "strength": "2",
@@ -1381,7 +1519,8 @@
     },
     {
         "name": "Toad",
-        "id": "",
+        "type": "Troop",
+        "id": "138",
         "deck": "monsters",
         "row": "ranged",
         "strength": "7",
@@ -1391,7 +1530,8 @@
     },
     {
         "name": "Francesca Findabair - Queen of Dol Blathanna",
-        "id": "13",
+        "type": "Leader",
+        "id": "139",
         "deck": "scoiatael",
         "row": "leader",
         "strength": "",
@@ -1401,7 +1541,8 @@
     },
     {
         "name": "Francesca Findabair - the Beautiful",
-        "id": "14",
+        "type": "Leader",
+        "id": "140",
         "deck": "scoiatael",
         "row": "leader",
         "strength": "",
@@ -1411,7 +1552,8 @@
     },
     {
         "name": "Francesca Findabair - Daisy of the Valley",
-        "id": "15",
+        "type": "Leader",
+        "id": "141",
         "deck": "scoiatael",
         "row": "leader",
         "strength": "",
@@ -1421,7 +1563,8 @@
     },
     {
         "name": "Francesca Findabair - Pureblood Elf",
-        "id": "16",
+        "type": "Leader",
+        "id": "142",
         "deck": "scoiatael",
         "row": "leader",
         "strength": "",
@@ -1431,7 +1574,8 @@
     },
     {
         "name": "Francesca Findabair - Hope of the Aen Seidhe",
-        "id": "",
+        "type": "Leader",
+        "id": "143",
         "deck": "scoiatael",
         "row": "leader",
         "strength": "",
@@ -1441,7 +1585,8 @@
     },
     {
         "name": "Ciaran aep Easnillien",
-        "id": "122",
+        "type": "Troop",
+        "id": "144",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "3",
@@ -1451,7 +1596,8 @@
     },
     {
         "name": "Barclay Els",
-        "id": "106",
+        "type": "Troop",
+        "id": "145",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "6",
@@ -1461,7 +1607,8 @@
     },
     {
         "name": "Dennis Cranmer",
-        "id": "102",
+        "type": "Troop",
+        "id": "146",
         "deck": "scoiatael",
         "row": "close",
         "strength": "6",
@@ -1471,7 +1618,8 @@
     },
     {
         "name": "Dol Blathanna Archer",
-        "id": "121",
+        "type": "Troop",
+        "id": "147",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "4",
@@ -1481,7 +1629,8 @@
     },
     {
         "name": "Dol Blathanna Scout",
-        "id": "107",
+        "type": "Troop",
+        "id": "148",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "6",
@@ -1491,7 +1640,8 @@
     },
     {
         "name": "Dol Blathanna Scout",
-        "id": "108",
+        "type": "Troop",
+        "id": "149",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "6",
@@ -1501,7 +1651,8 @@
     },
     {
         "name": "Dol Blathanna Scout",
-        "id": "109",
+        "type": "Troop",
+        "id": "150",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "6",
@@ -1511,7 +1662,8 @@
     },
     {
         "name": "Dwarven Skirmisher",
-        "id": "123",
+        "type": "Troop",
+        "id": "151",
         "deck": "scoiatael",
         "row": "close",
         "strength": "3",
@@ -1521,7 +1673,8 @@
     },
     {
         "name": "Dwarven Skirmisher",
-        "id": "124",
+        "type": "Troop",
+        "id": "152",
         "deck": "scoiatael",
         "row": "close",
         "strength": "3",
@@ -1531,7 +1684,8 @@
     },
     {
         "name": "Dwarven Skirmisher",
-        "id": "125",
+        "type": "Troop",
+        "id": "153",
         "deck": "scoiatael",
         "row": "close",
         "strength": "3",
@@ -1541,7 +1695,8 @@
     },
     {
         "name": "Eithn\u00e9",
-        "id": "17",
+        "type": "Troop",
+        "id": "154",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "10",
@@ -1551,7 +1706,8 @@
     },
     {
         "name": "Elven Skirmisher",
-        "id": "127",
+        "type": "Troop",
+        "id": "155",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "2",
@@ -1561,7 +1717,8 @@
     },
     {
         "name": "Elven Skirmisher",
-        "id": "128",
+        "type": "Troop",
+        "id": "156",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "2",
@@ -1571,7 +1728,8 @@
     },
     {
         "name": "Elven Skirmisher",
-        "id": "129",
+        "type": "Troop",
+        "id": "157",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "2",
@@ -1581,7 +1739,8 @@
     },
     {
         "name": "Filavandrel aen Fidhail",
-        "id": "104",
+        "type": "Troop",
+        "id": "158",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "6",
@@ -1591,7 +1750,8 @@
     },
     {
         "name": "Havekar Healer",
-        "id": "131",
+        "type": "Troop",
+        "id": "159",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "0",
@@ -1601,7 +1761,8 @@
     },
     {
         "name": "Havekar Healer",
-        "id": "132",
+        "type": "Troop",
+        "id": "160",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "0",
@@ -1611,7 +1772,8 @@
     },
     {
         "name": "Havekar Healer",
-        "id": "133",
+        "type": "Troop",
+        "id": "161",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "0",
@@ -1621,7 +1783,8 @@
     },
     {
         "name": "Havekar Smuggler",
-        "id": "110",
+        "type": "Troop",
+        "id": "162",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1631,7 +1794,8 @@
     },
     {
         "name": "Havekar Smuggler",
-        "id": "111",
+        "type": "Troop",
+        "id": "163",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1641,7 +1805,8 @@
     },
     {
         "name": "Havekar Smuggler",
-        "id": "112",
+        "type": "Troop",
+        "id": "164",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1651,7 +1816,8 @@
     },
     {
         "name": "Ida Emean aep Sivney",
-        "id": "103",
+        "type": "Troop",
+        "id": "165",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "6",
@@ -1661,7 +1827,8 @@
     },
     {
         "name": "Iorveth",
-        "id": "20",
+        "type": "Troop",
+        "id": "166",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "10",
@@ -1671,7 +1838,8 @@
     },
     {
         "name": "Isengrim Faoiltiarna",
-        "id": "19",
+        "type": "Troop",
+        "id": "167",
         "deck": "scoiatael",
         "row": "close",
         "strength": "10",
@@ -1681,7 +1849,8 @@
     },
     {
         "name": "Mahakaman Defender",
-        "id": "115",
+        "type": "Troop",
+        "id": "168",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1691,7 +1860,8 @@
     },
     {
         "name": "Mahakaman Defender",
-        "id": "116",
+        "type": "Troop",
+        "id": "169",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1701,7 +1871,8 @@
     },
     {
         "name": "Mahakaman Defender",
-        "id": "117",
+        "type": "Troop",
+        "id": "170",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1711,7 +1882,8 @@
     },
     {
         "name": "Mahakaman Defender",
-        "id": "118",
+        "type": "Troop",
+        "id": "171",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1721,7 +1893,8 @@
     },
     {
         "name": "Mahakaman Defender",
-        "id": "119",
+        "type": "Troop",
+        "id": "172",
         "deck": "scoiatael",
         "row": "close",
         "strength": "5",
@@ -1731,7 +1904,8 @@
     },
     {
         "name": "Milva",
-        "id": "101",
+        "type": "Troop",
+        "id": "173",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "10",
@@ -1741,7 +1915,8 @@
     },
     {
         "name": "Riordain",
-        "id": "130",
+        "type": "Troop",
+        "id": "174",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "1",
@@ -1751,7 +1926,8 @@
     },
     {
         "name": "Saesenthessis",
-        "id": "18",
+        "type": "Troop",
+        "id": "175",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "10",
@@ -1761,7 +1937,8 @@
     },
     {
         "name": "Toruviel",
-        "id": "126",
+        "type": "Troop",
+        "id": "176",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "2",
@@ -1771,7 +1948,8 @@
     },
     {
         "name": "Vrihedd Brigade Recruit",
-        "id": "120",
+        "type": "Troop",
+        "id": "177",
         "deck": "scoiatael",
         "row": "ranged",
         "strength": "4",
@@ -1781,7 +1959,8 @@
     },
     {
         "name": "Vrihedd Brigade Veteran",
-        "id": "113",
+        "type": "Troop",
+        "id": "178",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "5",
@@ -1791,7 +1970,8 @@
     },
     {
         "name": "Vrihedd Brigade Veteran",
-        "id": "114",
+        "type": "Troop",
+        "id": "179",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "5",
@@ -1801,7 +1981,8 @@
     },
     {
         "name": "Yaevinn",
-        "id": "105",
+        "type": "Troop",
+        "id": "180",
         "deck": "scoiatael",
         "row": "agile",
         "strength": "6",
@@ -1811,7 +1992,8 @@
     },
     {
         "name": "Berserker",
-        "id": "",
+        "type": "Troop",
+        "id": "181",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1821,7 +2003,8 @@
     },
     {
         "name": "Birna Bran",
-        "id": "",
+        "type": "Troop",
+        "id": "182",
         "deck": "skellige",
         "row": "close",
         "strength": "2",
@@ -1831,7 +2014,8 @@
     },
     {
         "name": "Blueboy Lugos",
-        "id": "",
+        "type": "Troop",
+        "id": "183",
         "deck": "skellige",
         "row": "close",
         "strength": "6",
@@ -1841,7 +2025,8 @@
     },
     {
         "name": "Cerys",
-        "id": "",
+        "type": "Troop",
+        "id": "184",
         "deck": "skellige",
         "row": "close",
         "strength": "10",
@@ -1851,7 +2036,8 @@
     },
     {
         "name": "Clan Brokva Archer",
-        "id": "",
+        "type": "Troop",
+        "id": "185",
         "deck": "skellige",
         "row": "ranged",
         "strength": "6",
@@ -1861,7 +2047,8 @@
     },
     {
         "name": "Clan Dimun Pirate",
-        "id": "",
+        "type": "Troop",
+        "id": "186",
         "deck": "skellige",
         "row": "ranged",
         "strength": "6",
@@ -1871,7 +2058,8 @@
     },
     {
         "name": "Cerys - Clan Drummond Shield Maiden",
-        "id": "",
+        "type": "Troop",
+        "id": "187",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1881,7 +2069,8 @@
     },
     {
         "name": "Cerys - Clan Drummond Shield Maiden",
-        "id": "",
+        "type": "Troop",
+        "id": "188",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1891,7 +2080,8 @@
     },
     {
         "name": "Cerys - Clan Drummond Shield Maiden",
-        "id": "",
+        "type": "Troop",
+        "id": "189",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1901,7 +2091,8 @@
     },
     {
         "name": "Clan Heymaey Skald",
-        "id": "",
+        "type": "Troop",
+        "id": "190",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1911,7 +2102,8 @@
     },
     {
         "name": "Clan Tordarroch Armorsmith",
-        "id": "",
+        "type": "Troop",
+        "id": "191",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1921,7 +2113,8 @@
     },
     {
         "name": "Clan an Craite Warrior",
-        "id": "",
+        "type": "Troop",
+        "id": "192",
         "deck": "skellige",
         "row": "close",
         "strength": "6",
@@ -1931,7 +2124,8 @@
     },
     {
         "name": "Donar an Hindar",
-        "id": "",
+        "type": "Troop",
+        "id": "193",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -1941,7 +2135,8 @@
     },
     {
         "name": "Draig Bon-Dhu",
-        "id": "",
+        "type": "Troop",
+        "id": "194",
         "deck": "skellige",
         "row": "siege",
         "strength": "2",
@@ -1951,7 +2146,8 @@
     },
     {
         "name": "Ermion",
-        "id": "",
+        "type": "Troop",
+        "id": "195",
         "deck": "skellige",
         "row": "ranged",
         "strength": "8",
@@ -1961,7 +2157,8 @@
     },
     {
         "name": "Hemdall",
-        "id": "",
+        "type": "Troop",
+        "id": "196",
         "deck": "skellige",
         "row": "close",
         "strength": "11",
@@ -1971,7 +2168,8 @@
     },
     {
         "name": "Hjalmar",
-        "id": "",
+        "type": "Troop",
+        "id": "197",
         "deck": "skellige",
         "row": "ranged",
         "strength": "10",
@@ -1981,7 +2179,8 @@
     },
     {
         "name": "Holger Blackhand",
-        "id": "",
+        "type": "Troop",
+        "id": "198",
         "deck": "skellige",
         "row": "siege",
         "strength": "4",
@@ -1991,7 +2190,8 @@
     },
     {
         "name": "Kambi",
-        "id": "",
+        "type": "Troop",
+        "id": "199",
         "deck": "skellige",
         "row": "close",
         "strength": "0",
@@ -2001,7 +2201,8 @@
     },
     {
         "name": "Light Longship",
-        "id": "",
+        "type": "Troop",
+        "id": "200",
         "deck": "skellige",
         "row": "ranged",
         "strength": "4",
@@ -2011,7 +2212,8 @@
     },
     {
         "name": "Madman Lugos",
-        "id": "",
+        "type": "Troop",
+        "id": "201",
         "deck": "skellige",
         "row": "close",
         "strength": "6",
@@ -2021,7 +2223,8 @@
     },
     {
         "name": "Mardroeme",
-        "id": "",
+        "type": "Special",
+        "id": "202",
         "deck": "special",
         "row": "",
         "strength": "",
@@ -2031,7 +2234,8 @@
     },
     {
         "name": "Olaf",
-        "id": "",
+        "type": "Troop",
+        "id": "203",
         "deck": "skellige",
         "row": "agile",
         "strength": "12",
@@ -2041,7 +2245,8 @@
     },
     {
         "name": "Skellige Storm",
-        "id": "",
+        "type": "Weather",
+        "id": "204",
         "deck": "weather",
         "row": "",
         "strength": "",
@@ -2051,7 +2256,8 @@
     },
     {
         "name": "Svanrige",
-        "id": "",
+        "type": "Troop",
+        "id": "205",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -2061,7 +2267,8 @@
     },
     {
         "name": "Transformed Vildkaarl",
-        "id": "",
+        "type": "Troop",
+        "id": "206",
         "deck": "skellige",
         "row": "close",
         "strength": "14",
@@ -2071,7 +2278,8 @@
     },
     {
         "name": "Transformed Young Vildkaarl",
-        "id": "",
+        "type": "Troop",
+        "id": "207",
         "deck": "skellige",
         "row": "ranged",
         "strength": "8",
@@ -2081,7 +2289,8 @@
     },
     {
         "name": "Udalryk",
-        "id": "",
+        "type": "Troop",
+        "id": "208",
         "deck": "skellige",
         "row": "close",
         "strength": "4",
@@ -2091,7 +2300,8 @@
     },
     {
         "name": "War Longship",
-        "id": "",
+        "type": "Troop",
+        "id": "209",
         "deck": "skellige",
         "row": "siege",
         "strength": "6",
@@ -2101,7 +2311,8 @@
     },
     {
         "name": "Young Berserker",
-        "id": "",
+        "type": "Troop",
+        "id": "210",
         "deck": "skellige",
         "row": "ranged",
         "strength": "2",
@@ -2111,7 +2322,8 @@
     },
     {
         "name": "Crach an Craite",
-        "id": "",
+        "type": "Leader",
+        "id": "211",
         "deck": "skellige",
         "row": "leader",
         "strength": "",
@@ -2121,7 +2333,8 @@
     },
     {
         "name": "King Bran",
-        "id": "",
+        "type": "Leader",
+        "id": "212",
         "deck": "skellige",
         "row": "leader",
         "strength": "",
@@ -2131,7 +2344,8 @@
     },
     {
         "name": "Schirru",
-        "id": "",
+        "type": "Troop",
+        "id": "213",
         "deck": "scoiatael",
         "row": "siege",
         "strength": "8",
