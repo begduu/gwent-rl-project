@@ -1,0 +1,41 @@
+import json
+
+card_database = "cards.json"
+prebuilt_decks = "prebuilt_decks.json"
+
+def load_card_data(filepath):
+    data_map= {}
+
+    with open(filepath, "r") as file:
+        for card in json.load(file):
+            data_map[card["id"]] = card
+
+    return data_map
+
+if __name__ == "__main__":
+    master_card_map = load_card_data(card_database)
+    with open(prebuilt_decks, "r") as file:
+        all_decks_map = json.load(file)
+
+    for faction, deck_list in all_decks_map.items():
+        print(faction)
+        
+        for deck_object in deck_list:
+            deck_name = deck_object["name"]
+            card_ids = deck_object["card_ids"]
+
+            print(f"    {deck_name}")
+            for card_id in card_ids:
+                card_data = master_card_map[card_id]
+                if card_data:
+                    card_name = card_data["name"]
+                    card_faction = card_data["faction"]
+
+                    is_faction_match = card_faction == faction
+
+                    if is_faction_match:
+                        print(f"        All good: {card_name}")
+                    else:
+                        print(f"        {card_name} is from the wrong faction {card_faction} instead of {faction}")
+
+
