@@ -51,7 +51,7 @@ if __name__ == "__main__":
                         print(f"        {card_name} ({card_faction}) is not allowed in a {faction_key} deck")
                         is_deck_valid = False
 
-            print(f"    {num_valid_cards} / {total_cards_in_deck} have valid factions")
+            print(f"    {num_valid_cards} / {total_cards_in_deck} cardshave valid factions")
             if is_deck_valid:
                 print(f"    {deck_name} is valid")
             else:
