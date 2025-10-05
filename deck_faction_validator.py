@@ -1,16 +1,8 @@
 import json
-
+from helpers import load_card_data
 card_database = "cards.json"
 prebuilt_decks = "decks.json"
 
-def load_card_data(filepath):
-    data_map= {}
-
-    with open(filepath, "r") as file:
-        for card in json.load(file):
-            data_map[card["id"]] = card
-
-    return data_map
 
 if __name__ == "__main__":
     master_card_map = load_card_data(card_database)

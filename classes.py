@@ -1,4 +1,5 @@
-import json
+
+from helpers import load_card_data
 class Player:
     def __init__(self, deck, hand, faction, leader_card):
         self.deck = deck
@@ -42,19 +43,25 @@ class LeaderCard(Card):
     def __init__(self, name, ability):
         super().__init__(name, ability)
         
-class Deck:
+class Deck():
     def __init__(self):
         self.cards = []
 
-    def 
+    def create_deck(self, master_card_map, deck_name, decks_data):
+        deck_ids = decks_data[deck_name]["card_ids"]
+        for card in master_card_map:
+            self.cards.append(master_card_map)
    
 
 class GameEngine:
     def __init__(self):
+        self.master_card_map = load_card_data("cards.json")
+
+        #create place holders for state of a single game
         self.p1 = None
         self.p2 = None
         self.board = Board()
         self.current_player = None
         self.current_round = 0
-    
+
     
