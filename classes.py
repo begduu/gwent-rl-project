@@ -1,5 +1,6 @@
 
 from helpers import load_card_data
+import random 
 
 class Player:
     def __init__(self, deck, hand, faction, leader_card):
@@ -9,6 +10,7 @@ class Player:
         self.faction = faction
         self.leader_card = leader_card
         self.num_wins = 0
+        self.passed = False
 
 class Board:
     def __init__(self):
@@ -47,8 +49,13 @@ class LeaderCard(Card):
 class Deck():
     def __init__(self):
         self.cards = []
+    
+    def shuffle(self):
+        random.shuffle(self.cards)
+    
+    
 
-    def create_deck(self, master_card_map, faction, deck_name, decks_data):
+    def create_deck(self, master_card_dict, faction, deck_name, decks_data):
         target_deck_data = None
         for deck_info in decks_data.get(faction, []):
             if deck_info.get("name") == deck_name:
@@ -59,7 +66,7 @@ class Deck():
             card_ids = target_deck_data.get("card_ids", [])
 
             for card_id in card_ids:
-                card = master_card_map.get(card_id)
+                card = master_card_dict.get(card_id)
                 if not card:
                     continue
                 if card["type"] == "Weather":
@@ -73,7 +80,7 @@ class Deck():
        
 class GameEngine:
     def __init__(self):
-        self.master_card_map = load_card_data("cards.json")
+        self.master_card_dict = load_card_data("cards.json")
 
         #create place holders for state of a single game
         self.p1 = None
