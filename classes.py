@@ -53,16 +53,26 @@ class Deck():
     def shuffle(self):
         random.shuffle(self.cards)
     
-    
 
     def create_deck(self, master_card_dict, faction, deck_name, decks_data):
+        """
+        Adds cards to the deck and returns the LeaderCard object
+        """
         target_deck_data = None
+        leader_card_obj = None
         for deck_info in decks_data.get(faction, []):
             if deck_info.get("name") == deck_name:
                 target_deck_data = deck_info
                 break
 
         if target_deck_data:
+
+            leader_id = target_deck_data.get("leader_id")
+            if leader_id:
+                leader_card_data = master_card_dict.get(leader_id)
+                if leader_card_data:
+                    leader_card_obj = LeaderCard(leader_card_data["name"], leader_card_data["ability"])
+
             card_ids = target_deck_data.get("card_ids", [])
 
             for card_id in card_ids:
@@ -77,6 +87,7 @@ class Deck():
                     self.cards.append(SpecialCard(card["name"], card["ability"]))
                 else:
                     continue
+        return leader_card_obj
        
 class GameEngine:
     def __init__(self):
