@@ -17,10 +17,12 @@ class Board:
         self.p1_melee = []
         self.p1_ranged = []
         self.p1_seige = []
+        self.p1_score = 0
 
         self.p2_melee = []
         self.p2_ranged = []
         self.p2_seige = []
+        self.p2_score = 0
 
         self.weather = []
 
@@ -49,12 +51,23 @@ class LeaderCard(Card):
 class Deck():
     def __init__(self):
         self.cards = []
+        self.hand = []
     
     def shuffle(self):
         random.shuffle(self.cards)
     
-
+    def draw(self, num_cards):
+        """
+        removes and returns a given number of cards from the end of the cards list
+        """
+        drawn_cards = []
+        for _ in range(num_cards):
+            if self.cards:
+                drawn_cards.append(self.cards.pop())
+        return drawn_cards
+    
     def create_deck(self, master_card_dict, faction, deck_name, decks_data):
+
         """
         Adds cards to the deck and returns the LeaderCard object
         """
@@ -93,11 +106,29 @@ class GameEngine:
     def __init__(self):
         self.master_card_dict = load_card_data("cards.json")
 
-        #create place holders for state of a single game
         self.p1 = None
         self.p2 = None
         self.board = Board()
         self.current_player = None
         self.current_round = 0
 
+    #TODO generalize get_row_score to be able to do each row individualy
+    def get_row_score(self, player, row):
+        strength = 0
+        is_there_weather = False
+        for weather_card in self.board.weather:
+            if weather_card.name == "Biting Frost":
+                is_there_weather = True
+        for card in self.board.p1_melee:
+            if not "hero" in card.ability and is_there_weather:
+                strength += card.strength // 2
+            else:
+                strength += card.strength
+
+    def get_player_score(self, player):
+        total_score = 0
+        target_rows = []
+        if player == self.p1:
+            melee
+            self.board.p1_melee
     
