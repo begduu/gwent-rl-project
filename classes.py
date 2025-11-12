@@ -116,12 +116,18 @@ class GameEngine:
     def get_row_score(self, player, row):
         strength = 0
         is_there_weather = False
+        row_dict = {
+            "melee": "Biting Frost",
+            "ranged": "Impenetrable Fog",
+            "siege": "Torrential Rain"
+        }
+        target_weather = row_dict[row]
         for weather_card in self.board.weather:
-            if weather_card.name == "Biting Frost":
+            if weather_card.name == target_weather:
                 is_there_weather = True
         for card in self.board.p1_melee:
             if not "hero" in card.ability and is_there_weather:
-                strength += card.strength // 2
+                strength += 1
             else:
                 strength += card.strength
 
