@@ -17,11 +17,17 @@ class Board:
         self.p1_melee = []
         self.p1_ranged = []
         self.p1_seige = []
+        self.p1_melee_horn = False
+        self.p1_ranged_horn = False
+        self.p1_seige_horn = False
         self.p1_score = 0
 
         self.p2_melee = []
         self.p2_ranged = []
         self.p2_seige = []
+        self.p2_melee_horn = False
+        self.p2_ranged_horn = False
+        self.p2_seige_horn = False
         self.p2_score = 0
 
         self.weather = []
@@ -112,29 +118,65 @@ class GameEngine:
         self.current_player = None
         self.current_round = 0
 
-    #TODO generalize get_row_score to be able to do each row individualy
-    def get_row_score(self, player, row):
-        strength = 0
+    def get_row_score(self, player: Player, row: str):
         is_there_weather = False
         row_dict = {
             "melee": "Biting Frost",
             "ranged": "Impenetrable Fog",
             "siege": "Torrential Rain"
         }
+
         target_weather = row_dict[row]
         for weather_card in self.board.weather:
             if weather_card.name == target_weather:
                 is_there_weather = True
-        for card in self.board.p1_melee:
-            if not "hero" in card.ability and is_there_weather:
-                strength += 1
-            else:
-                strength += card.strength
+        
+        row_to_check = None
+        is_there_horn = False
+        if player == self.p1:
+            match row:
+                case "melee":
+                    row_to_check = self.board.p1_melee
+                    if self.board.p1_melee_horn: is_there_horn = True
+                case "ranged":
+                    row_to_check = self.board.p1_ranged
+                    if self.board.p1_ranged_horn: is_there_horn = True
+                case "seige": 
+                    row_to_check = self.board.p1_seige
+                    if self.board.p1_seige_horn: is_there_horn = True
+        if player == self.p2:
+            match row:
+                case "melee":
+                    row_to_check = self.board.p2_melee
+                    if self.board.p2_melee_horn: is_there_horn = True
+                case "ranged":
+                    row_to_check = self.board.p2_ranged
+                    if self.board.p2_ranged_horn: is_there_horn = True
+                case "seige": 
+                    row_to_check = self.board.p2_seige
+                    if self.board.p2_seige_horn: is_there_horn = True
+
+
+        total_base_strength = 0
+        morale_giver_count = 0 # How many cards provide a morale boost
+        non_hero_card_count = 0 # How many cards are ELIGIBLE to revieve morale boost
+        non_hero_morale_giver_count = 0 # How many cards are non-hero and are morale givers
+        if row_to_check is not None:
+            for card in row_to_check:
+                if "morale" in card.ability: morale_giver_count += 1
+                if not "hero" in card.ability: non_hero_card_count += 1
+                if "morale" in card.ability and not "hero" in card.ability: non_hero_morale_giver_count += 1
+
+                if not "hero" in card.ability and is_there_weather:
+                    total_base_strength += 1
+                else:
+                    total_base_strength += card.strength
+        total_bonus = (morale_giver_count * non_hero_card_count) - non_hero_morale_giver_count
+
+        return total_base_strength + total_bonus
 
     def get_player_score(self, player):
         total_score = 0
         target_rows = []
-        if player == self.p1:
-            melee
-            self.board.p1_melee
+        
     
