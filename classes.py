@@ -16,18 +16,18 @@ class Board:
     def __init__(self):
         self.p1_melee = []
         self.p1_ranged = []
-        self.p1_seige = []
+        self.p1_siege = []
         self.p1_melee_horn = False
         self.p1_ranged_horn = False
-        self.p1_seige_horn = False
+        self.p1_siege_horn = False
         self.p1_score = 0
 
         self.p2_melee = []
         self.p2_ranged = []
-        self.p2_seige = []
+        self.p2_siege = []
         self.p2_melee_horn = False
         self.p2_ranged_horn = False
-        self.p2_seige_horn = False
+        self.p2_siege_horn = False
         self.p2_score = 0
 
         self.weather = []
@@ -141,9 +141,9 @@ class GameEngine:
                 case "ranged":
                     row_to_check = self.board.p1_ranged
                     if self.board.p1_ranged_horn: is_there_horn = True
-                case "seige": 
-                    row_to_check = self.board.p1_seige
-                    if self.board.p1_seige_horn: is_there_horn = True
+                case "siege": 
+                    row_to_check = self.board.p1_siege
+                    if self.board.p1_siege_horn: is_there_horn = True
         if player == self.p2:
             match row:
                 case "melee":
@@ -152,12 +152,12 @@ class GameEngine:
                 case "ranged":
                     row_to_check = self.board.p2_ranged
                     if self.board.p2_ranged_horn: is_there_horn = True
-                case "seige": 
-                    row_to_check = self.board.p2_seige
-                    if self.board.p2_seige_horn: is_there_horn = True
+                case "siege": 
+                    row_to_check = self.board.p2_siege
+                    if self.board.p2_siege_horn: is_there_horn = True
 
-
-        total_base_strength = 0
+        non_hero_strength = 0
+        hero_strength = 0
         morale_giver_count = 0 # How many cards provide a morale boost
         non_hero_card_count = 0 # How many cards are ELIGIBLE to revieve morale boost
         non_hero_morale_giver_count = 0 # How many cards are non-hero and are morale givers
@@ -167,13 +167,21 @@ class GameEngine:
                 if not "hero" in card.ability: non_hero_card_count += 1
                 if "morale" in card.ability and not "hero" in card.ability: non_hero_morale_giver_count += 1
 
-                if not "hero" in card.ability and is_there_weather:
-                    total_base_strength += 1
-                else:
-                    total_base_strength += card.strength
-        total_bonus = (morale_giver_count * non_hero_card_count) - non_hero_morale_giver_count
+                if "horn" in card.ability: is_there_horn = True
 
-        return total_base_strength + total_bonus
+                if not "hero" in card.ability and is_there_weather:
+                    non_hero_strength += 1
+                elif not "hero" in card.ability and not is_there_weather:
+                    non_hero_strength += card.strength
+                else:
+                    hero_strength += card.strength
+
+        morale_bonus = (morale_giver_count * non_hero_card_count) - non_hero_morale_giver_count
+        non_hero_strength += morale_bonus
+        if is_there_horn:
+            non_hero_strength *= 2
+
+        return non_hero_strength + hero_strength
 
     def get_player_score(self, player):
         total_score = 0
