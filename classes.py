@@ -184,5 +184,7 @@ class GameEngine:
         return non_hero_strength + hero_strength
 
     def get_player_score(self, player):
-        return self.get_row_score(player, "melee") + self.get_row_score(player, "ranged") + self.get_row_score(player, "siege")
+        return (self.get_row_score(player, "melee") + 
+        self.get_row_score(player, "ranged") + 
+        self.get_row_score(player, "siege"))
 
