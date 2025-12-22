@@ -118,7 +118,7 @@ class GameEngine:
         self.current_player = None
         self.current_round = 0
 
-    def get_row_score(self, player: Player, row: str):
+    def get_row_score(self, player: Player, row: str) -> int:
         is_there_weather = False
         row_dict = {
             "melee": "Biting Frost",
@@ -161,20 +161,23 @@ class GameEngine:
         morale_giver_count = 0 # How many cards provide a morale boost
         non_hero_card_count = 0 # How many cards are ELIGIBLE to revieve morale boost
         non_hero_morale_giver_count = 0 # How many cards are non-hero and are morale givers
-        if row_to_check is not None:
-            for card in row_to_check:
-                if "morale" in card.ability: morale_giver_count += 1
-                if not "hero" in card.ability: non_hero_card_count += 1
-                if "morale" in card.ability and not "hero" in card.ability: non_hero_morale_giver_count += 1
 
-                if "horn" in card.ability: is_there_horn = True
+        if row_to_check is None:
+            return -1
+        
+        for card in row_to_check:
+            if "morale" in card.ability: morale_giver_count += 1
+            if not "hero" in card.ability: non_hero_card_count += 1
+            if "morale" in card.ability and not "hero" in card.ability: non_hero_morale_giver_count += 1
 
-                if not "hero" in card.ability and is_there_weather:
-                    non_hero_strength += 1
-                elif not "hero" in card.ability and not is_there_weather:
-                    non_hero_strength += card.strength
-                else:
-                    hero_strength += card.strength
+            if "horn" in card.ability: is_there_horn = True
+
+            if not "hero" in card.ability and is_there_weather:
+                non_hero_strength += 1
+            elif not "hero" in card.ability and not is_there_weather:
+                non_hero_strength += card.strength
+            else:
+                hero_strength += card.strength
 
         morale_bonus = (morale_giver_count * non_hero_card_count) - non_hero_morale_giver_count
         non_hero_strength += morale_bonus
@@ -183,8 +186,22 @@ class GameEngine:
 
         return non_hero_strength + hero_strength
 
-    def get_player_score(self, player):
+    def get_player_score(self, player: Player) -> int:
         return (self.get_row_score(player, "melee") + 
         self.get_row_score(player, "ranged") + 
         self.get_row_score(player, "siege"))
 
+    def play_card(self, player: Player, card_index: int, row_choice=None) -> bool:
+        """
+        returns True if valid or false otherwise
+        """
+        if player != self.current_player:
+            return False
+        if player.passed:
+            return False
+        if card_index >= len(player.hand):
+            return False
+        
+        
+
+        return True
