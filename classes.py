@@ -1,6 +1,7 @@
 
 from helpers import load_card_data
 import random 
+from typing import Any
 
 class Player:
     def __init__(self, deck, hand, faction, leader_card):
@@ -72,7 +73,7 @@ class Deck():
                 drawn_cards.append(self.cards.pop())
         return drawn_cards
     
-    def create_deck(self, master_card_dict, faction, deck_name, decks_data):
+    def create_deck(self, master_card_dict: dict[str, Any], faction: str, deck_name: str, decks_data: dict[str, Any]) -> LeaderCard | None:
 
         """
         Adds cards to the deck and returns the LeaderCard object
@@ -84,28 +85,29 @@ class Deck():
                 target_deck_data = deck_info
                 break
 
-        if target_deck_data:
+        if not target_deck_data:
+            return None
 
-            leader_id = target_deck_data.get("leader_id")
-            if leader_id:
-                leader_card_data = master_card_dict.get(leader_id)
-                if leader_card_data:
-                    leader_card_obj = LeaderCard(leader_card_data["name"], leader_card_data["ability"])
+        leader_id = target_deck_data.get("leader_id")
+        if leader_id:
+            leader_card_data = master_card_dict.get(leader_id)
+            if leader_card_data:
+                leader_card_obj = LeaderCard(leader_card_data["name"], leader_card_data["ability"])
 
-            card_ids = target_deck_data.get("card_ids", [])
+        card_ids = target_deck_data.get("card_ids", [])
 
-            for card_id in card_ids:
-                card = master_card_dict.get(card_id)
-                if not card:
-                    continue
-                if card["type"] == "Weather":
-                    self.cards.append(WeatherCard(card["name"], card["ability"]))
-                elif card["type"] == "Troop":
-                    self.cards.append(TroopCard(card["name"], int(card["Strength"]), card["ability"]))
-                elif card["type"] == "Special":
-                    self.cards.append(SpecialCard(card["name"], card["ability"]))
-                else:
-                    continue
+        for card_id in card_ids:
+            card = master_card_dict.get(card_id)
+            if not card:
+                continue
+            if card["type"] == "Weather":
+                self.cards.append(WeatherCard(card["name"], card["ability"]))
+            elif card["type"] == "Troop":
+                self.cards.append(TroopCard(card["name"], int(card["Strength"]), card["ability"]))
+            elif card["type"] == "Special":
+                self.cards.append(SpecialCard(card["name"], card["ability"]))
+            else:
+                continue
         return leader_card_obj
        
 class GameEngine:
@@ -202,6 +204,6 @@ class GameEngine:
         if card_index >= len(player.hand):
             return False
         
-        
+
 
         return True
