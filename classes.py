@@ -4,9 +4,9 @@ import random
 from typing import Any
 
 class Player:
-    def __init__(self, deck, hand, faction, leader_card):
-        self.deck = deck
-        self.hand = hand
+    def __init__(self, faction, leader_card):
+        self.deck = []
+        self.hand = []
         self.discard_pile = []
         self.faction = faction
         self.leader_card = leader_card
@@ -55,28 +55,20 @@ class LeaderCard(Card):
     def __init__(self, name, ability):
         super().__init__(name, ability)
         
-class Deck():
+              
+class GameEngine:
     def __init__(self):
-        self.cards = []
-        self.hand = []
-    
-    def shuffle(self):
-        random.shuffle(self.cards)
-    
-    def draw(self, num_cards):
-        """
-        removes and returns a given number of cards from the end of the cards list
-        """
-        drawn_cards = []
-        for _ in range(num_cards):
-            if self.cards:
-                drawn_cards.append(self.cards.pop())
-        return drawn_cards
-    
-    def create_deck(self, master_card_dict: dict[str, Any], faction: str, deck_name: str, decks_data: dict[str, Any]) -> LeaderCard | None:
+        self.master_card_dict = load_card_data("cards.json")
 
+        self.p1 = None
+        self.p2 = None
+        self.board = Board()
+        self.current_player = None
+        self.current_round = 0
+
+    def create_deck(self, master_card_dict: dict[str, Any], faction: str, deck_name: str, decks_data: dict[str, Any]) -> tuple[list[Card], LeaderCard | None] | None:
         """
-        Adds cards to the deck and returns the LeaderCard object
+        Returns a list of card objects and the leader card object
         """
         target_deck_data = None
         leader_card_obj = None
@@ -95,30 +87,20 @@ class Deck():
                 leader_card_obj = LeaderCard(leader_card_data["name"], leader_card_data["ability"])
 
         card_ids = target_deck_data.get("card_ids", [])
-
+        cards_list: list[Card] = []
         for card_id in card_ids:
             card = master_card_dict.get(card_id)
             if not card:
                 continue
             if card["type"] == "Weather":
-                self.cards.append(WeatherCard(card["name"], card["ability"]))
+                cards_list.append(WeatherCard(card["name"], card["ability"]))
             elif card["type"] == "Troop":
-                self.cards.append(TroopCard(card["name"], int(card["Strength"]), card["ability"]))
+                cards_list.append(TroopCard(card["name"], int(card["Strength"]), card["ability"]))
             elif card["type"] == "Special":
-                self.cards.append(SpecialCard(card["name"], card["ability"]))
+                cards_list.append(SpecialCard(card["name"], card["ability"]))
             else:
                 continue
-        return leader_card_obj
-       
-class GameEngine:
-    def __init__(self):
-        self.master_card_dict = load_card_data("cards.json")
-
-        self.p1 = None
-        self.p2 = None
-        self.board = Board()
-        self.current_player = None
-        self.current_round = 0
+        return cards_list, leader_card_obj
 
     def get_row_score(self, player: Player, row: str) -> int:
         is_there_weather = False
@@ -195,7 +177,7 @@ class GameEngine:
 
     def play_card(self, player: Player, card_index: int, row_choice=None) -> bool:
         """
-        returns True if valid or false otherwise
+        returns True if it worked else false
         """
         if player != self.current_player:
             return False
@@ -204,6 +186,7 @@ class GameEngine:
         if card_index >= len(player.hand):
             return False
         
+        card = player.hand.pop(card_index)
 
 
         return True
