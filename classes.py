@@ -1,45 +1,28 @@
 
 from helpers import load_card_data
-import random 
-from typing import Any
+#import random 
+from typing import TypedDict, NotRequired, Any
 
-class Player:
-    def __init__(self, faction, leader_card):
-        self.deck = []
-        self.hand = []
-        self.discard_pile = []
-        self.faction = faction
-        self.leader_card = leader_card
-        self.num_wins = 0
-        self.passed = False
+class CardData(TypedDict):
+    name: str
+    type: str
+    ability: str
 
-class Board:
-    def __init__(self):
-        self.p1_melee = []
-        self.p1_ranged = []
-        self.p1_siege = []
-        self.p1_melee_horn = False
-        self.p1_ranged_horn = False
-        self.p1_siege_horn = False
-        self.p1_score = 0
+    strength: NotRequired[int]
+    row: NotRequired[str]
 
-        self.p2_melee = []
-        self.p2_ranged = []
-        self.p2_siege = []
-        self.p2_melee_horn = False
-        self.p2_ranged_horn = False
-        self.p2_siege_horn = False
-        self.p2_score = 0
-
-        self.weather = []
+class DeckInfo(TypedDict):
+    name: str
+    leader_id: str
+    card_ids: list[str]
 
 class Card:
-    def __init__(self, name, ability):
+    def __init__(self, name: str, ability: str):
         self.name = name
         self.ability = ability
 
 class TroopCard(Card):
-    def __init__(self, name, ability, strength, row):
+    def __init__(self, name: str, ability: str, strength: int, row: str):
         super().__init__(name, ability)
         self.strength = strength 
         self.row = row
@@ -56,7 +39,36 @@ class LeaderCard(Card):
     def __init__(self, name, ability):
         super().__init__(name, ability)
         
-              
+class Player:
+    def __init__(self, faction: str, leader_card: LeaderCard):
+        self.deck = []
+        self.hand = []
+        self.discard_pile = []
+        self.faction = faction
+        self.leader_card = leader_card
+        self.num_wins = 0
+        self.passed = False
+
+class Board:
+    def __init__(self):
+        self.p1_close = []
+        self.p1_ranged = []
+        self.p1_siege = []
+        self.p1_close_horn = False
+        self.p1_ranged_horn = False
+        self.p1_siege_horn = False
+        self.p1_score = 0
+
+        self.p2_close = []
+        self.p2_ranged = []
+        self.p2_siege = []
+        self.p2_close_horn = False
+        self.p2_ranged_horn = False
+        self.p2_siege_horn = False
+        self.p2_score = 0
+
+        self.weather = []
+      
 class GameEngine:
     def __init__(self):
         self.master_card_dict = load_card_data("cards.json")
@@ -67,7 +79,12 @@ class GameEngine:
         self.current_player = None
         self.current_round = 0
 
-    def create_deck(self, master_card_dict: dict[str, Any], faction: str, deck_name: str, decks_data: dict[str, Any]) -> tuple[list[Card], LeaderCard | None] | None:
+    def create_deck(self, 
+                    master_card_dict: dict[str, CardData],
+                    faction: str, 
+                    deck_name: str, 
+                    decks_data: dict[str, DeckInfo]
+                    ) -> tuple[list[Card], LeaderCard | None] | None:
         """
         Returns a list of card objects and the leader card object
         """
@@ -96,7 +113,7 @@ class GameEngine:
             if card["type"] == "Weather":
                 cards_list.append(WeatherCard(card["name"], card["ability"]))
             elif card["type"] == "Troop":
-                cards_list.append(TroopCard(card["name"], card["ability"], int(card["Strength"]), card["row"]))
+                cards_list.append(TroopCard(card["name"], card["ability"], int(card["strength"]), card["row"]))
             elif card["type"] == "Special":
                 cards_list.append(SpecialCard(card["name"], card["ability"]))
             else:
@@ -106,7 +123,7 @@ class GameEngine:
     def get_row_score(self, player: Player, row: str) -> int:
         is_there_weather = False
         row_dict = {
-            "melee": "Biting Frost",
+            "close": "Biting Frost",
             "ranged": "Impenetrable Fog",
             "siege": "Torrential Rain"
         }
@@ -120,9 +137,9 @@ class GameEngine:
         is_there_horn = False
         if player == self.p1:
             match row:
-                case "melee":
-                    row_to_check = self.board.p1_melee
-                    if self.board.p1_melee_horn: is_there_horn = True
+                case "close":
+                    row_to_check = self.board.p1_close
+                    if self.board.p1_close_horn: is_there_horn = True
                 case "ranged":
                     row_to_check = self.board.p1_ranged
                     if self.board.p1_ranged_horn: is_there_horn = True
@@ -131,9 +148,9 @@ class GameEngine:
                     if self.board.p1_siege_horn: is_there_horn = True
         if player == self.p2:
             match row:
-                case "melee":
-                    row_to_check = self.board.p2_melee
-                    if self.board.p2_melee_horn: is_there_horn = True
+                case "close":
+                    row_to_check = self.board.p2_close
+                    if self.board.p2_close_horn: is_there_horn = True
                 case "ranged":
                     row_to_check = self.board.p2_ranged
                     if self.board.p2_ranged_horn: is_there_horn = True
@@ -172,7 +189,7 @@ class GameEngine:
         return non_hero_strength + hero_strength
 
     def get_player_score(self, player: Player) -> int:
-        return (self.get_row_score(player, "melee") + 
+        return (self.get_row_score(player, "close") + 
         self.get_row_score(player, "ranged") + 
         self.get_row_score(player, "siege"))
 
