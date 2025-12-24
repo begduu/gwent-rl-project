@@ -39,9 +39,10 @@ class Card:
         self.ability = ability
 
 class TroopCard(Card):
-    def __init__(self, name, strength, ability):
+    def __init__(self, name, ability, strength, row):
         super().__init__(name, ability)
         self.strength = strength 
+        self.row = row
 
 class SpecialCard(Card):
     def __init__(self, name, ability):
@@ -95,7 +96,7 @@ class GameEngine:
             if card["type"] == "Weather":
                 cards_list.append(WeatherCard(card["name"], card["ability"]))
             elif card["type"] == "Troop":
-                cards_list.append(TroopCard(card["name"], int(card["Strength"]), card["ability"]))
+                cards_list.append(TroopCard(card["name"], card["ability"], int(card["Strength"]), card["row"]))
             elif card["type"] == "Special":
                 cards_list.append(SpecialCard(card["name"], card["ability"]))
             else:
