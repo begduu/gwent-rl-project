@@ -1,7 +1,8 @@
 
-from helpers import load_card_data
+from helpers import load_card_data, parse_abilities
 #import random 
-from typing import TypedDict, NotRequired, Any
+from typing import TypedDict, NotRequired
+from enum import Enum
 
 class CardData(TypedDict):
     name: str
@@ -16,28 +17,38 @@ class DeckInfo(TypedDict):
     leader_id: str
     card_ids: list[str]
 
+class RowType(Enum):
+    CLOSE = "close"
+    RANGED = "ranged"
+    SIEGE = "siege"
+
+class Ability(Enum):
+    DECOY = "decoy"
+    HORN = "horn"
+
+
 class Card:
-    def __init__(self, name: str, ability: str):
+    def __init__(self, name: str, abilities: list[Ability]):
         self.name = name
-        self.ability = ability
+        self.abilities = abilities
 
 class TroopCard(Card):
-    def __init__(self, name: str, ability: str, strength: int, row: str):
-        super().__init__(name, ability)
+    def __init__(self, name: str, abilities: list[Ability], strength: int, row: str):
+        super().__init__(name, abilities)
         self.strength = strength 
         self.row = row
 
 class SpecialCard(Card):
-    def __init__(self, name, ability):
-        super().__init__(name, ability)
+    def __init__(self, name: str, abilities: list[Ability]):
+        super().__init__(name, abilities)
 
 class WeatherCard(Card):
-    def __init__(self, name, ability):
-        super().__init__(name, ability)
+    def __init__(self, name: str, abilities: list[Ability]):
+        super().__init__(name, abilities)
 
 class LeaderCard(Card):
-    def __init__(self, name, ability):
-        super().__init__(name, ability)
+    def __init__(self, name: str, abilities: list[Ability]):
+        super().__init__(name, abilities)
         
 class Player:
     def __init__(self, faction: str, leader_card: LeaderCard):
