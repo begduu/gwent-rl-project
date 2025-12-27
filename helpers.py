@@ -1,5 +1,5 @@
 import json
-from classes import Ability
+from types import Ability, DeckInfo
 
 def load_card_data(filepath: str) -> dict[str, dict[str, str]]:
     """
@@ -34,8 +34,17 @@ def load_card_data(filepath: str) -> dict[str, dict[str, str]]:
             data_dict[card["id"]] = card
     return data_dict
 
-def load_deck_data(filepath: str) -> dict:
-    """Loads pre-built deck configurations from a JSON file."""
+def load_deck_data(filepath: str) -> dict[str, list[DeckInfo]]:
+    """
+    Loads pre-built deck configurations from a JSON file.
+    
+    Args:
+        filepath(str): path to the JSON file containing deck information
+    
+    Returns:
+        dict[str, list[DeckInfo]]: Dictionary where the key is the faction name and
+        the value is a list of the Decks 
+    """
     with open(filepath, "r") as file:
         return json.load(file)
 
